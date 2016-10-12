@@ -27,45 +27,42 @@
 
 
 class Country
-	def initialize
-		puts "This is the Country."
-	end
+	
 
-	def countryName 
+	def country_name 
 	 # give the country name.
+	 return "India"
 	end
-end
-
-class City
-	def initialize
-		puts "This is the City"
-	end
-
 	# define cityName  --> give the city name
-end
+	def city_name
+		return "Mysore"
+	end
 
+	#96, Railway Layout, Vijaynagar
+	def street_address
+		return "#96, Railway Layout, Vijaynagar"
+	end
+end
 
 class Address < Country
 	def initialize
 		puts "This is my address."
 	end
 
-	# define completeAddress --> complete address. 
+	# Complete Address'
 
-end
-
-class Number < City
-	def initialize
-		puts "This is my address."
-	end
-
-	# define streetAddress --> '#96, Railway Layout, Vijaynagar'
-
-	def completeAddress
-		puts streetAddress cityName countryName 
+	def complete_address
+		puts "My complete Address  #{street_address}, #{city_name}, #{country_name}" 
 	end
 end
 
 
 
 # instantiate a object and check for all address.
+
+obj=Address.new
+puts "Country Name => #{obj.country_name}"
+puts "City Name => #{obj.city_name}"
+puts "Street Address => #{obj.street_address}"
+obj.complete_address
+
